@@ -1,0 +1,28 @@
+git remote add origin https://github.com/vamsikrishna13/git-commands.git  // This command will establish connection between local Repository and remote Repository.
+                      //Here 'origin' indicates unique name to remote Repository This can be changed as per our convention.
+
+git branch -M main  // This command changes our master branch name to 'main'
+
+git push origin [branch-name]  // To push committed changes from local Repository to remote Repository under the branch.
+Ex:- git push origin master
+git push -u origin [branch-name] //-u will create upstream connectivity between local and remote repository.
+
+git branch -a // This will list all local tracking branches and the remote tracking branches in red colour. This is located under local Repository i.e. local master branch.
+
+git branch -r // Lists only remote tracking branches.
+
+git pull origin master // To pull branch files from remote Repository to local Repository(probably master branch).
+                       // This involves 'git fetch' from remote Repository branch to remote tracking branch and then 'git merge' from
+                       // remote tracking branch to local Repository branch.
+
+git ls-remote // Displays references available in a remote repository along with the associated commit IDs.
+
+git branch -vv //Displays more  details about branches. List local tracking branches and their remotes.
+
+git remote // Shows all remote server.
+
+git remote show origin // Shows more information about remote branch. Shows detailed Configuration.
+
+git branch --track branch-name origin/branch-name //Create local tracking branch.
+
+git clone cloneURL //cloneURL is from remote branch that you want to clone.
