@@ -1,0 +1,67 @@
+Git Commands
+=============
+
+git status //To check status of working directory and stagign area
+
+git init //To Initialze Empty Git Repository
+
+git add file_name //To add individual untracked file to staging area
+
+git add .  //To add all untracked files to staging area
+
+git commit -m "Message"  //To commit the changes into Repository
+
+//To add author details
+git config --global user.email "Your Email"
+git config --global user.name "Your Name"
+
+git log // To view all commits log details(branches or current branch).
+
+git checkout commit-id  //to check out previous commit changes.
+git checkout master  //to checkout master branch.
+
+
+git branch //List all branches.
+
+git branch branch-name  //To create new branch name. Should not contain spaces.
+git switch branch_name
+
+git checkout branch-name //To checkout a particular branch.
+
+git checkout -b branch-name  //Another way to create new branch and checkout that new branch.
+git switch -c branch_name
+
+git merge branch_name //To merge another branch into current branch or master branch. Ensure to checkout the branch to which you want to merge another branch.
+
+git ls-files //List the files in staging area
+
+git rm file_name // To add/update the removed/deleted file from working directory into staging area. This will remove from staging area and next commits
+
+
+-----Undoing unStaged changes. It means changes not added to staging area-----------
+git clean -dn // To delete all new untracked files.
+-d is for to delete
+-n is for to list all untracked files
+
+git clean -df //To delete forcefully all untracked files without any furhter questions
+
+git checkout file_name // This will check out that particular file again from the branch. This will helpful when we want to revert the modified file.
+git checkout . // This will check out that all files again from the branch. This will helpful when we want to revert the multiple modified files.
+git restore file_name // This will restore that particular file again from the branch. This will helpful when we want to revert the modified file.
+git restore . // This will restore all files again from the branch. This will helpful when we want to revert the multiple modified files.
+//git restore and checkout does similar operation.
+
+---------------------------------------
+
+-----------Undoing Staged changes. It means changes added to staging area but not committed-------------
+
+Two ways:
+1. git reset file_name
+   git checkout file_name
+
+2. git restore --staged file_name //Better to use this
+   git checkout file_name   
+
+-------------------------------------------------------------------   
+
+git branch -D branch_name  //To delete a branch forcefully(-D)
