@@ -1,9 +1,9 @@
-Git Commands
+Git Command's
 =============
 
-git status //To check status of working directory and stagign area
+git status //To check status of working directory and staging area
 
-git init //To Initialze Empty Git Repository
+git init //To Initialise Empty Git Repository
 
 git add file_name //To add individual untracked file to staging area
 
@@ -43,7 +43,7 @@ git clean -dn // To delete all new untracked files.
 -d is for to delete
 -n is for to list all untracked files
 
-git clean -df //To delete forcefully all untracked files without any furhter questions
+git clean -df //To delete forcefully all untracked files without any further questions
 
 git checkout file_name // This will check out that particular file again from the branch. This will helpful when we want to revert the modified file.
 git checkout . // This will check out that all files again from the branch. This will helpful when we want to revert the multiple modified files.
@@ -60,8 +60,8 @@ Two ways:
    git checkout file_name
 
 2. git restore --staged file_name //Better to use this
-   git checkout file_name   
+   git checkout file_name
 
--------------------------------------------------------------------   
+-------------------------------------------------------------------
 
 git branch -D branch_name  //To delete a branch forcefully(-D)
